@@ -18,7 +18,7 @@ function! ale#handlers#textlint#GetCommand(buffer) abort
 
     return ale#node#Executable(a:buffer, l:executable)
     \    . (!empty(l:options) ? ' ' . l:options : '')
-    \    . ' -f json --stdin --stdin-filename %s'
+    \    . ' -f json --stdin'
 endfunction
 
 function! ale#handlers#textlint#HandleTextlintOutput(buffer, lines) abort
